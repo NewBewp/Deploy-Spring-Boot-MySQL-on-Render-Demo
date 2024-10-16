@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: Deploy-on-Render
+  datasource:
+    url: jdbc:mysql://localhost:3307/ChatApp
+    username: root
+    password: 1234
+  sql:
+    init:
+      platform: mysql
+server:
+  port: 8081
