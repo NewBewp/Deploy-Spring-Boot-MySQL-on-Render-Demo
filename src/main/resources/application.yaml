@@ -2,11 +2,22 @@ spring:
   application:
     name: Deploy-on-Render
   datasource:
-    url: jdbc:mysql://localhost:3307/ChatApp
+    url: jdbc:mysql://localhost:3307/ChatAppDeployDemo
+    driverClassName: "com.mysql.cj.jdbc.Driver"
     username: root
-    password: 1234
+    password: 1234    
   sql:
     init:
       platform: mysql
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
 server:
   port: 8081
